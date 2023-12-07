@@ -2,13 +2,13 @@
 
 This is a code repository for our robot.
 
-## Intruduction
+## Introduction
 
-This code repository contains the necessary code required to implement the robot's functionality, which includes the code of core robot functions, sensors, manipulater, etc. For the ultimate refinement of the project, this document may also be improved as the task progresses.
+This code repository contains the necessary code required to implement the robot's functionality, which includes the code of core robot functions, sensors, manipulator, etc. For the ultimate refinement of the project, this document may also be improved as the task progresses.
 
 ## Description of Robot
 
-The robot will be capable of retrieving bright-coloured wooden cubes from an environment. The operation is set in an environment characterised by dynamic lighting conditions and the presence of static obstacles that necessitate obstacle detection and avoidance. The robot is required to retrieve all objects within a 30-minute time frame, while maintaining a high level of au- tonomy and adhering to safety standards.
+The robot will be capable of retrieving bright-coloured wooden cubes from an environment. The operation is set in an environment characterised by dynamic lighting conditions and the presence of static obstacles that necessitate obstacle detection and avoidance. The robot is required to retrieve all objects within a 30-minute time frame, while maintaining a high level of autonomy and adhering to safety standards.
 
 ## System Structure
 
