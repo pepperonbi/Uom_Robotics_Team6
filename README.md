@@ -1,6 +1,6 @@
 # Uom_Robotics_Team6
 
-This is a code repository for our robot.
+This is a code repository for the robot.
 
 ## Introduction
 
