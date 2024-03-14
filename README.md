@@ -14,7 +14,38 @@ The robot will be capable of retrieving bright-coloured wooden cubes from an env
 
 The firmware operates directly on the LeoCore board's processor. It offers various functionalities to the Raspberry Pi via a serial bus. Additionally, it wirelessly connects to an NUC, which oversees sensors (depth camera and LiDAR) and the manipulator. Simultaneously, the Raspberry Pi houses a set of ROS nodes that enable access to various features through ROS topics and services.
 
-(Insert a diagram at this place. )
+![System Structure](/Graph/System%20Diagram%20of%20the%20Leo%20Rover%20and%20NUC.jpeg)
+
+## Repository Structure
+
+The tree shows a rough stucture of this repository, including important packages and directories.
+
+```
+Uom_Robotics_Team6
+├── Graph                        # Graphs or pictures for introduction
+├── LINK FOR CAD.txt             
+├── README.md
+└── team06_rover_ws              # The workspace of Team 6
+    └── src                      
+        ├── auto_nav_pkg         # Package for navigation and mapping
+        │   ├── auto_nav_pkg
+        │   ├── map
+        │   └── launch
+        └── object_det_pkg       # Package for object detection and grasping
+            ├── object_det_pkg       
+            └── launch
+
+```
+
+## Contributors
+
+Jorge Corpa Chung: jorge.corpachung@student.manchester.ac.uk
+
+Praneel Raghuraman: praneel.Raghuraman@postgrad.manchester.ac.uk
+
+Moyan Zhang: moyan.zhang@postgrad.manchester.ac.uk
+
+Zhirui Zhang: zhirui.zhang@postgrad.manchester.ac.uk
 
 ## Reference
 
