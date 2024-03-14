@@ -1,0 +1,12 @@
+package.xml
+setup.cfg
+setup.py
+auto_nav_pkg/__init__.py
+auto_nav_pkg.egg-info/PKG-INFO
+auto_nav_pkg.egg-info/SOURCES.txt
+auto_nav_pkg.egg-info/dependency_links.txt
+auto_nav_pkg.egg-info/entry_points.txt
+auto_nav_pkg.egg-info/requires.txt
+auto_nav_pkg.egg-info/top_level.txt
+auto_nav_pkg.egg-info/zip-safe
+resource/auto_nav_pkg

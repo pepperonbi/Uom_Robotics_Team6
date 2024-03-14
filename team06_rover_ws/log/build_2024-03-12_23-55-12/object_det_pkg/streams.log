@@ -1,0 +1,27 @@
+[0.852s] Invoking command in '/home/sfr2023/team06_rover/build/object_det_pkg': PYTHONPATH=/home/sfr2023/team06_rover/build/object_det_pkg/prefix_override:/home/sfr2023/team06_rover/install/object_det_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/sfr2023/team06_rover/build/object_det_pkg/build --no-deps install_data
+[1.030s] running develop
+[1.032s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.032s]   warnings.warn(
+[1.033s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.033s]   warnings.warn(
+[1.147s] running egg_info
+[1.147s] creating object_det_pkg.egg-info
+[1.147s] writing object_det_pkg.egg-info/PKG-INFO
+[1.147s] writing dependency_links to object_det_pkg.egg-info/dependency_links.txt
+[1.147s] writing entry points to object_det_pkg.egg-info/entry_points.txt
+[1.147s] writing requirements to object_det_pkg.egg-info/requires.txt
+[1.147s] writing top-level names to object_det_pkg.egg-info/top_level.txt
+[1.147s] writing manifest file 'object_det_pkg.egg-info/SOURCES.txt'
+[1.148s] reading manifest file 'object_det_pkg.egg-info/SOURCES.txt'
+[1.149s] writing manifest file 'object_det_pkg.egg-info/SOURCES.txt'
+[1.150s] running build_ext
+[1.150s] Creating /home/sfr2023/team06_rover/install/object_det_pkg/lib/python3.10/site-packages/object-det-pkg.egg-link (link to .)
+[1.150s] 
+[1.151s] Installed /home/sfr2023/team06_rover/build/object_det_pkg
+[1.151s] running install_data
+[1.151s] creating /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index
+[1.151s] creating /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index/resource_index
+[1.151s] creating /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index/resource_index/packages
+[1.151s] copying resource/object_det_pkg -> /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index/resource_index/packages
+[1.151s] copying package.xml -> /home/sfr2023/team06_rover/install/object_det_pkg/share/object_det_pkg
+[1.173s] Invoked command in '/home/sfr2023/team06_rover/build/object_det_pkg' returned '0': PYTHONPATH=/home/sfr2023/team06_rover/build/object_det_pkg/prefix_override:/home/sfr2023/team06_rover/install/object_det_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/sfr2023/team06_rover/build/object_det_pkg/build --no-deps install_data

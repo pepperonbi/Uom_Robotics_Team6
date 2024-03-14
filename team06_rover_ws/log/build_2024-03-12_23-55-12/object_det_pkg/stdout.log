@@ -1,0 +1,21 @@
+running develop
+running egg_info
+creating object_det_pkg.egg-info
+writing object_det_pkg.egg-info/PKG-INFO
+writing dependency_links to object_det_pkg.egg-info/dependency_links.txt
+writing entry points to object_det_pkg.egg-info/entry_points.txt
+writing requirements to object_det_pkg.egg-info/requires.txt
+writing top-level names to object_det_pkg.egg-info/top_level.txt
+writing manifest file 'object_det_pkg.egg-info/SOURCES.txt'
+reading manifest file 'object_det_pkg.egg-info/SOURCES.txt'
+writing manifest file 'object_det_pkg.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sfr2023/team06_rover/install/object_det_pkg/lib/python3.10/site-packages/object-det-pkg.egg-link (link to .)
+
+Installed /home/sfr2023/team06_rover/build/object_det_pkg
+running install_data
+creating /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index
+creating /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index/resource_index
+creating /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index/resource_index/packages
+copying resource/object_det_pkg -> /home/sfr2023/team06_rover/install/object_det_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/sfr2023/team06_rover/install/object_det_pkg/share/object_det_pkg
