@@ -1,9 +1,9 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Pose, Point, Quaternion
-from object_detection import PoseEstimation
+from obj_det.object_detection import ObjectDetection
 import cv2
-import tf2_py as tf
+import numpy as np
 
 class DesiredPositionPublisher(Node):
     def __init__(self):
@@ -24,19 +24,31 @@ class DesiredPositionPublisher(Node):
             # Use a small timeout for spin_once to allow other operations to proceed
             rclpy.spin_once(self, timeout_sec=0.5)
         
-        pose = PoseEstimation()
         msg = Pose()
-        msg.position = Point(x=0.3, y=0.0, z=0.055)
+        # msg.position = Point(x=0.3, y=0.0, z=0.055)
+        ###########################################################
+        obj = ObjectDetection()
+        coordinates = []
+        while True:
+            coordinate = obj.main()
+            if coordinate is not None:
+                coordinates.append(coordinate)
+                if len(coordinates) == 200:
+                    coordinates.pop(160)
+                    avg_coordinate = np.mean(coordinates, axis=0)
+                    print('Average coordinate: ', avg_coordinate)
+                    #coordinates = []
+                    break
+
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        
+        obj.pipeline.stop()
+        cv2.destroyAllWindows()
+        
+        msg.position = Point(x=avg_coordinate[0], y=avg_coordinate[1], z=avg_coordinate[2])
+        ###########################################################
         msg.orientation = Quaternion(x=0.0, y=0.0, z=0.0, w=1.0)
-        # pose = PoseEstimation()
-        # while True:
-        #     rotation, translation = pose.get_pose()
-        #     if rotation is not None and translation is not None:
-        #         msg.position = Point(x=translation[0], y=translation[1], z=translation[2])
-        #         quaternion = tf.transformations.quaternion_from_euler(rotation[0], rotation[1], rotation[2])
-        #         msg.orientation = Quaternion(x=quaternion[0], y=quaternion[1], z=quaternion[2], w=quaternion[3])
-        #     if cv2.waitKey(1) & 0xFF == ord('q'):
-        #         break
 
         # Publishing the message
         self.publisher.publish(msg)
@@ -53,5 +65,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-
 

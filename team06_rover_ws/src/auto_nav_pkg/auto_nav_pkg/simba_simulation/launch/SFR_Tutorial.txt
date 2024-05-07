@@ -1,0 +1,42 @@
+https://uommscrobotics.github.io/SFR_Tutorials/build/html/index.html
+https://navigation.ros.org/index.html
+https://www.leorover.tech/knowledge-base
+
+
+
+##WEEK 09 SAVING A MAP
+------------------------------------------------------
+##
+colcon build
+source install/setup.bash
+ros2 launch simba_simulation  map_maker.launch.py
+##
+source install/setup.bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+##
+source install/setup.bash
+ros2 launch nav2_map_server map_saver_server.launch.py
+##
+ros2 service call /map_saver/save_map nav2_msgs/srv/SaveMap "map_topic: 'map'
+map_url: 'map_name'
+image_format: 'pgm'
+map_mode: 'trinary'
+free_thresh: 0.25
+occupied_thresh: 0.65"
+
+
+##WEEK 10 AUTONOMOUS NAVIGATION 
+-------------------------------------------------------
+##
+colcon build
+source install/setup.bash
+ros2 launch simba_simulation  nav_demo.launch.py
+
+
+
+##WEEK 11 BEHAVIOUR TREE
+-------------------------------------------------------
+##
+colcon build
+source install/setup.bash
+ros2 launch simba_simulation  bt_demo.launch.py

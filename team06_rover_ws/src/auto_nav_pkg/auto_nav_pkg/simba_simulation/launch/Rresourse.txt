@@ -1,0 +1,70 @@
+----------------------------launch---------------------------
+./leo_ws/src/leo_simulator-ros2/leo_gz_bringup/launch
+/leo_gz.launch.py
+./leo_ws/src/leo_simulator-ros2/leo_gz_bringup/launch
+/spawn_robot.launch.py
+
+/home/sfr2023/leo_ws/src/gz_example_robot_description/launch
+/sim_robot.launch.py
+/home/sfr2023/leo_ws/src/gz_example_robot_description/launch
+view_model.launch
+-------------------------------------------------------------
+
+--------------------------world------------------------------
+./leo_ws/src/gz_example_robot_description/worlds
+/tb3.sdf
+/tb4.sdf
+-------------------------------------------------------------
+
+---------------------------rviz------------------------------
+./leo_ws/src/gz_example_robot_description/rviz
+/nav2.rviz
+##topic /map -> /base_link
+-------------------------------------------------------------
+
+--------------------------model------------------------------
+./leo_ws/src/leo_common-ros2/leo_description/urdf
+/leo_sim.urdf.xacro
+./leo_ws/src/leo_common-ros2/leo_description/urdf
+/macros.urdf.xacro
+
+./leo_ws/src/leo_common-ros2/leo_description/urdf
+/leo_simba.urdf.xacro
+./leo_ws/src/leo_common-ros2/leo_description/urdf
+/macros_simba.urdf.xacro
+-------------------------------------------------------------
+
+----------------------behaviour tree-------------------------
+./leo_ws/src/simba_simulation/behavior_tree_xml
+
+EXPLORER_LITE:
+https://github.com/robo-friends/m-explore-ros2
+# ros2 launch explore_lite explore.launch.py
+
+# ./leo_ws/src/simba_simulation/launch
+# /nav_demo.launch.py
+./leo_ws/src/simba_simulation/launch
+
+/explore_demo.launch.py
+-------------------------------------------------------------
+
+-------------------------cmd_vel-----------------------------
+./leo_ws/src/simba_simulation/launch
+/spawn_robot.launch.py
+# ./leo_ws/src/simba_simulation/launch
+# /bt_demo.launch.py
+
+REMAPPING:
+/cmd_vel -> /nav_cmd_vel -> twist_mux -> /cmd_vel
+
+teleop_keyboard:
+/cmd_vel -> /teleop_cmd_vel
+ros2 run teleop_twist_keyboard teleop_twist_keyboard -r cmd_vel:=/teleop_cmd_vel
+
+-------------------------------------------------------------
+
+
+--------------------------ekf_node---------------------------
+/odom & /imu_raw -> /odometry/filtered
+config .yaml files need to be changed
+-------------------------------------------------------------
