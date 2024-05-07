@@ -32,8 +32,8 @@ Uom_Robotics_Team6
         │   ├── map
         │   └── launch
         ├── leo_description      # Model of Leo Rover
-        └── object_det_pkg       # Package for object detection and grasping
-            ├── object_det_pkg       
+        └── obj_det_pkg       # Package for object detection and grasping
+            ├── obj_det_pkg       
             └── launch
 
 ```
